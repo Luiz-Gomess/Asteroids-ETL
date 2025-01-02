@@ -5,7 +5,8 @@ import pandas as pd
 import requests
 from dateutil.relativedelta import relativedelta
 from dotenv import load_dotenv
-from helpers import find_key
+from helpers.find_key import find_key
+# from helpers.send_to_s3 import send_to_s3
 
 load_dotenv()
 
@@ -44,8 +45,21 @@ for asteroid in asteroids_list:
 
 columns = list(map(lambda column : column.replace(" ", "_"), columns))
 
-df = pd.DataFrame(columns=columns, data=rows)
-df.to_csv("asteroids.csv", index=False)
+arquivo = f"{start_date.day}-{current_date.day}_asteroids.csv"
+current_month = current_date.strftime("%m") + "/"
+path = "raw_data/" + current_month+ arquivo
 
+df = pd.DataFrame(columns=columns, data=rows)
+
+try:
+    df.to_csv(path, index=False)
+except OSError:
+    os.mkdir("raw_data/" + current_month)
+    df.to_csv(path, index=False)
+
+# try:
+#     send_to_s3(arquivo)
+# except Exception as e:
+#     print(e)
     
     
