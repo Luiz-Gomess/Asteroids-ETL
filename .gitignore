@@ -1,3 +1,6 @@
 venv/
 .env
-helpers/__pycache__
+__pychache__
+etl/extract/__pychache__
+etl/transform/__pychache__
+etl/load/__pychache__
