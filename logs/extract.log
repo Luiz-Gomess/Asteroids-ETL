@@ -1,4 +1,54 @@
-2025-01-07 09:54:08.058 | INFO     | __main__:extract_data_from_api:25 - 200 - Chamada de API bem-sucedida
-2025-01-07 10:05:19.394 | INFO     | __main__:extract_data_from_api:25 - 200 - Chamada de API bem-sucedida
-2025-01-07 10:06:06.960 | INFO     | __main__:extract_data_from_api:25 - 200 - Chamada de API bem-sucedida
-2025-01-07 10:06:36.329 | INFO     | __main__:extract_data_from_api:26 - 200 - Chamada de API bem-sucedida
+2025-01-10 08:01:57.607 | INFO     | __main__:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:01:59.252 | INFO     | __main__:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:01:59.252 | INFO     | __main__:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:01:59.270 | INFO     | __main__:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:01:59.279 | INFO     | __main__:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:01:59.279 | INFO     | __main__:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:04:06.201 | INFO     | __main__:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:04:09.408 | INFO     | __main__:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:04:09.408 | INFO     | __main__:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:04:09.423 | INFO     | __main__:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:04:09.435 | INFO     | __main__:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:04:09.436 | INFO     | __main__:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:21:34.115 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:21:44.561 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:21:44.577 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:21:44.577 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:21:44.591 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:21:44.591 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:39:15.167 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:39:17.661 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:39:17.677 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:39:17.685 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:39:17.694 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:39:17.694 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:39:48.185 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:39:49.791 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:39:49.794 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:39:49.801 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:39:49.805 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:39:49.805 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:56:29.077 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:56:32.315 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:56:32.318 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:56:32.325 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:56:32.336 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:56:32.337 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:57:04.470 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:57:05.970 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:57:05.985 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:57:05.995 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:57:06.005 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:57:06.005 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:57:56.260 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:57:58.598 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:57:58.598 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:57:58.598 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:57:58.616 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:57:58.616 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.
+2025-01-10 08:59:00.203 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
+2025-01-10 08:59:01.867 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
+2025-01-10 08:59:01.867 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
+2025-01-10 08:59:01.882 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
+2025-01-10 08:59:01.882 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-10 - raw_data.csv
+2025-01-10 08:59:01.882 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.

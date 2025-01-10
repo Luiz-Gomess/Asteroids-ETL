@@ -2,46 +2,20 @@ import datetime
 import os
 import pandas as pd
 from dateutil.relativedelta import relativedelta
-from etl.extract.find_key import find_key
 
 def trasform(data, output_path = os.path.join(os.getcwd(), "data", "processed")):
+    
+    df = pd.DataFrame(data=data)
 
-    current_date = datetime.date.today()
-    start_date = current_date - relativedelta(days=7)
+    df.rename(columns={"relative_velocity kilometers_per_second" : "relative_velocity_km/s",
+                       "miss_distance kilometers":"miss_distance_kilometers",
+                       "kilometers estimated_diameter_max": "estimated_diameter_kilometers"}, inplace=True)
+    
+    
+    df["relative_velocity_km/s"] = df["relative_velocity_km/s"].apply(lambda x : round(float(x), 4))
+    df["miss_distance_kilometers"] = df["miss_distance_kilometers"].apply(lambda x : round(float(x),2))
+    df["estimated_diameter_kilometers"] = df["estimated_diameter_kilometers"].apply(lambda x : round(float(x),4))
+    
 
-    asteroids_list = data["near_earth_objects"][str(current_date)]
+    return df
 
-    columns = [
-        "id",
-        "name",
-        "absolute_magnitude_h",
-        "kilometers estimated_diameter_max",
-        "is_potentially_hazardous_asteroid", 
-        "close_approach_date", 
-        "relative_velocity kilometers_per_hour", 
-        "miss_distance kilometers",  
-        "orbiting_body",
-    ]
-
-    rows = []
-
-    for asteroid in asteroids_list:
-        row = []
-        for column in columns:
-            row.append(find_key(asteroid, column))
-        rows.append(row)
-        
-
-    # columns = list(map(lambda column : column.replace(" ", "_"), columns))
-
-    arquivo = f"{start_date.day}-{current_date.day}_asteroids.csv"
-    current_month = current_date.strftime("%m") + "/"
-    path = "raw_data/" + current_month+ arquivo
-
-    df = pd.DataFrame(columns=columns, data=rows)
-
-    try:
-        df.to_csv(path, index=False)
-    except OSError:
-        os.mkdir("raw_data/" + current_month)
-        df.to_csv(path, index=False)
