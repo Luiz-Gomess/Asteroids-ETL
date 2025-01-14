@@ -3,7 +3,7 @@ from loguru import logger
 
 
 def load(file, bucket_name, aws_access_key_id, aws_secret_access_key):
-    logger.info("Iniciando etapa de Carregamento.")
+    logger.info("Etapa de Carregamento inicializada.")
 
     file_in_bucket = file.split("\processed")[-1]
     file_in_bucket = file_in_bucket.replace("\\", "/")
@@ -25,4 +25,4 @@ def load(file, bucket_name, aws_access_key_id, aws_secret_access_key):
     except Exception as e:
         logger.error(e)
 
-    logger.info("Finalizando etapa de Carregamento.")
+    logger.info("Etapa de Carregamento finalizada.")

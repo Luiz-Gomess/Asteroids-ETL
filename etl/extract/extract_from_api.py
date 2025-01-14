@@ -13,7 +13,7 @@ def extract(api_key):
 
         CURRENT_DATE = datetime.date.today()
         START_DATE = CURRENT_DATE - relativedelta(days=7)
-        FILE = str(CURRENT_DATE) + " - raw_data.csv"
+        FILE = str(CURRENT_DATE) + " - raw_data.parquet"
     
         file_path = os.path.join(os.getcwd(), "data", "raw", CURRENT_DATE.strftime("%m"), FILE )
         api_url = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={START_DATE}&end_date={CURRENT_DATE}&api_key={api_key}"
@@ -55,10 +55,10 @@ def extract(api_key):
 
         try:
             df = pd.DataFrame(columns=columns, data= rows)
-            df.to_csv(file_path)
+            df.to_parquet(file_path)
         except OSError:
             os.mkdir(os.path.join(os.getcwd(), "data", "raw", CURRENT_DATE.strftime("%m")))
-            df.to_csv(file_path)
+            df.to_parquet(file_path)
         finally:
             logger.info(f"Arquivo salvo como {FILE}")
 

@@ -6,11 +6,11 @@ from loguru import logger
 
 def trasform(data):
 
-    logger.info("Iniciando etapa de Transformação")
+    logger.info("Etapa de Transformação iniciada")
     
     CURRENT_DATE = datetime.date.today()
 
-    filename = str(CURRENT_DATE) + " - processed_data.csv"
+    filename = str(CURRENT_DATE) + " - processed_data.parquet"
     output_path = os.path.join(os.getcwd(), "data", "processed", CURRENT_DATE.strftime("%m"))
 
 
@@ -36,13 +36,15 @@ def trasform(data):
     
     try:
         os.makedirs(output_path, exist_ok=True)
-        df.to_csv(os.path.join(output_path, filename))
+        df.to_parquet(os.path.join(output_path, filename))
 
         return os.path.join(output_path, filename)
 
     except OSError as errex:
         logger.error(errex)
+    
+    finally:
+        logger.info("Etapa de Transformação finalizada.")
 
-    logger.info("Finalizando etapa de Transformação.")
     
 
