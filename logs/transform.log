@@ -1,7 +1,0 @@
-2025-01-13 09:01:03.371 | INFO     | etl.extract.extract_from_api:extract_data_from_api:17 - Etapa de Extração iniciada.
-2025-01-13 09:01:05.891 | INFO     | etl.extract.extract_from_api:extract_data_from_api:28 - 200 - Chamada de API bem-sucedida.
-2025-01-13 09:01:05.891 | INFO     | etl.extract.extract_from_api:extract_data_from_api:49 - Iniciando coleta.
-2025-01-13 09:01:05.896 | INFO     | etl.extract.extract_from_api:extract_data_from_api:61 - Coleta finalizada
-2025-01-13 09:01:05.910 | INFO     | etl.extract.extract_from_api:extract_data_from_api:69 - Arquivo salvo como 2025-01-13 - raw_data.csv
-2025-01-13 09:01:05.912 | INFO     | etl.extract.extract_from_api:extract_data_from_api:71 - Etapa de Extração finalizada.
-2025-01-13 09:01:05.918 | INFO     | etl.transform.transform:trasform:10 - Iniciando etapa de transformação

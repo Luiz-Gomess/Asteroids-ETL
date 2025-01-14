@@ -2,17 +2,12 @@ import datetime
 import os   
 import pandas as pd
 import requests
-import sys
 from dateutil.relativedelta import relativedelta
-from dotenv import load_dotenv
 from etl.extract.find_key import find_key
 from loguru import logger
 
-load_dotenv()
 
-logger.add("logs/extract.log")
-
-def extract_data_from_api():
+def extract(api_key):
     try:
         logger.info("Etapa de Extração iniciada.")
 
@@ -21,14 +16,12 @@ def extract_data_from_api():
         FILE = str(CURRENT_DATE) + " - raw_data.csv"
     
         file_path = os.path.join(os.getcwd(), "data", "raw", CURRENT_DATE.strftime("%m"), FILE )
-        api_url = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={START_DATE}&end_date={CURRENT_DATE}&api_key={os.getenv('API_KEY')}"
+        api_url = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={START_DATE}&end_date={CURRENT_DATE}&api_key={api_key}"
 
-        try:
-            response = requests.get(api_url)
-            logger.info(f"{response.status_code} - Chamada de API bem-sucedida.")
-        except requests.exceptions.RequestException as errex:
-            logger.error(errex)
-            sys.exit(1)
+
+        response = requests.get(api_url)
+        response.raise_for_status()
+        logger.info(f"{response.status_code} - Chamada de API bem-sucedida.")
 
         data = response.json()
         columns = [
@@ -59,6 +52,7 @@ def extract_data_from_api():
 
                 rows.append(row)
         logger.info("Coleta finalizada")
+
         try:
             df = pd.DataFrame(columns=columns, data= rows)
             df.to_csv(file_path)
@@ -77,4 +71,4 @@ def extract_data_from_api():
 
 
 if __name__ == "__main__":
-    result = extract_data_from_api()
+    result = extract()
