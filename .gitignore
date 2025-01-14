@@ -1,7 +1,4 @@
 venv/
 .env
-__pychache__
-etl/extract/__pychache__
-etl/transform/__pychache__
-etl/load/__pychache__
+__pycache__/
 testing.py
