@@ -1,13 +1,14 @@
-2025-01-14 10:06:57.493 | INFO     | etl.extract.extract_from_api:extract:12 - Etapa de Extração iniciada.
-2025-01-14 10:06:59.761 | INFO     | etl.extract.extract_from_api:extract:24 - 200 - Chamada de API bem-sucedida.
-2025-01-14 10:06:59.765 | INFO     | etl.extract.extract_from_api:extract:42 - Iniciando coleta.
-2025-01-14 10:06:59.770 | INFO     | etl.extract.extract_from_api:extract:54 - Coleta finalizada
-2025-01-14 10:06:59.781 | INFO     | etl.extract.extract_from_api:extract:63 - Arquivo salvo como 2025-01-14 - raw_data.csv
-2025-01-14 10:06:59.782 | INFO     | etl.extract.extract_from_api:extract:65 - Etapa de Extração finalizada.
-2025-01-14 10:06:59.785 | INFO     | etl.transform.transform:trasform:9 - Iniciando etapa de Transformação
-2025-01-14 10:06:59.789 | INFO     | etl.transform.transform:trasform:20 - Renomeando colunas
-2025-01-14 10:06:59.790 | INFO     | etl.transform.transform:trasform:29 - Aplicando transformações
-2025-01-14 10:06:59.799 | INFO     | etl.load.load:load:6 - Iniciando etapa de Carregamento.
-2025-01-14 10:07:00.173 | INFO     | etl.load.load:load:20 - Conexão com o S3 bem-sucedida.
-2025-01-14 10:07:03.474 | INFO     | etl.load.load:load:23 - Arquivo '01/2025-01-14 - processed_data.csv' salvo no bucket 'asteroidsbucket1'
-2025-01-14 10:07:03.474 | INFO     | etl.load.load:load:28 - Finalizando etapa de Carregamento.
+2025-01-14 10:38:48.284 | INFO     | etl.extract.extract_from_api:extract:12 - Etapa de Extração iniciada.
+2025-01-14 10:38:50.646 | INFO     | etl.extract.extract_from_api:extract:26 - 200 - Chamada de API bem-sucedida.
+2025-01-14 10:38:50.646 | INFO     | etl.extract.extract_from_api:extract:51 - Iniciando coleta.
+2025-01-14 10:38:50.659 | INFO     | etl.extract.extract_from_api:extract:63 - Coleta finalizada
+2025-01-14 10:38:50.848 | INFO     | etl.extract.extract_from_api:extract:74 - Arquivo salvo como 2025-01-14 - raw_data.parquet
+2025-01-14 10:38:50.849 | INFO     | etl.extract.extract_from_api:extract:76 - Etapa de Extração finalizada.
+2025-01-14 10:38:50.854 | INFO     | etl.transform.transform:trasform:9 - Etapa de Transformação iniciada
+2025-01-14 10:38:50.855 | INFO     | etl.transform.transform:trasform:20 - Renomeando colunas
+2025-01-14 10:38:50.856 | INFO     | etl.transform.transform:trasform:29 - Aplicando transformações
+2025-01-14 10:38:50.866 | INFO     | etl.transform.transform:trasform:47 - Etapa de Transformação finalizada.
+2025-01-14 10:38:50.867 | INFO     | etl.load.load:load:6 - Etapa de Carregamento inicializada.
+2025-01-14 10:38:51.315 | INFO     | etl.load.load:load:20 - Conexão com o S3 bem-sucedida.
+2025-01-14 10:38:54.574 | INFO     | etl.load.load:load:23 - Arquivo '01/2025-01-14 - processed_data.parquet' salvo no bucket 'asteroidsbucket1'
+2025-01-14 10:38:54.575 | INFO     | etl.load.load:load:28 - Etapa de Carregamento finalizada.
